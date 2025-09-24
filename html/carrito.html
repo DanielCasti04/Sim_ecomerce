@@ -44,12 +44,17 @@
         <main>
           <h2 class="titulo_principal">Carrito</h2>
           <div class="contenedor_carrito">
+            <!--carrito vacio-->
             <p class="carrito_vacio">
               Tu carrito está super vacio.<br />
               Mete cosaas!!
               <i class="bi bi-emoji-expressionless"></i>
             </p>
+            <!--productos -->
+
             <div class="carrito_productos">
+            <!--producto1-->
+            <div class="carrito_producto">
               <img src="/img/teclado1.jpg" alt="" />
               <div class="carrito_producto_titulo">
                 <small>Titulo</small>
@@ -71,7 +76,8 @@
                 <i class="bi bi-trash-fill">.</i>
               </button>
             </div>
-            <div class="carrito_productos">
+            <!--producto2-->
+            <div class="carrito_producto">
               <img src="/img/teclado2.jpg" alt="" />
               <div class="carrito_producto_titulo">
                 <small>Titulo</small>
@@ -94,6 +100,20 @@
               </button>
             </div>
           </div>
+            <!--acciones carrito-->
+          <div class="carrito_acciones">
+                <div class="carrito_acciones_izquierda">
+                        <button class="carrito_acciones_vaciar">Vaciar carrito</button>
+                </div>
+                <div class="carrito_acciones_derecha">
+                        <div class="carrito_acciones_total">
+                            <p>Total:</p>
+                            <p id="total">$3000</p>
+                        </div>
+                        <button class="carrito_acciones_comprar">Comprar ahora</button>
+                </div>
+          </div>
+         </div> 
         </main>
       </div>
       <script src="/javascript/main.js"></script>
