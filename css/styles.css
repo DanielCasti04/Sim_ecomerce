@@ -1,0 +1,319 @@
+/* ===== RESET Y CONFIGURACIONES GENERALES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+aside {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+}
+
+/* ===== NAVEGACIÓN ===== */
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 8px;
+}
+
+.boton_menu {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 12px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  position: relative;
+}
+
+.boton_menu:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.boton_menu.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+}
+
+.boton_menu i {
+  font-size: 18px;
+}
+
+/* ===== NUMERITO DEL CARRITO ===== */
+.numerito {
+  background: #ff4757;
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  margin-left: auto;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ===== FOOTER SIDEBAR ===== */
+footer {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.texto_footer {
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.titulo_principal {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ===== GRID DE PRODUCTOS ===== */
+.contenedor_productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* ===== TARJETA DE PRODUCTO ===== */
+.producto {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.producto_imagen {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover .producto_imagen {
+  transform: scale(1.05);
+}
+
+.producto_detalles {
+  padding: 20px;
+}
+
+.producto_titulo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.producto_precio {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.producto_agregar {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.producto_agregar:hover {
+  background: linear-gradient(135deg, #5a6fd8, #6b42a6);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.producto_agregar:active {
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 250px 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  .titulo_principal {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  aside {
+    position: static;
+    order: 2;
+  }
+
+  main {
+    order: 1;
+  }
+
+  .contenedor_productos {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .boton_menu {
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  aside,
+  main {
+    padding: 20px;
+  }
+
+  .contenedor_productos {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo_principal {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+}
+
+/* ===== EFECTOS ADICIONALES ===== */
+.producto_agregar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.producto_agregar:hover:before {
+  left: 100%;
+}
+
+.producto_agregar {
+  position: relative;
+  overflow: hidden;
+}
