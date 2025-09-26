@@ -16,6 +16,7 @@ function CargarProductos(productosElegidos) {
               <h3 class="producto_titulo">${producto.titulo}</h3>
               <p class="producto_precio">$${producto.precio}</p>
               <button class="producto_agregar" id="${producto.id}" >Agregar</button>
+              </div>
               `;
     contenedorProductos.append(div);
   });
@@ -50,7 +51,8 @@ function actualizarBotonesAgregar() {
   });
 }
 
-const productosEnCarrito = [];
+let productosEnCarrito = localStorage.getItem("productos_en_carrito");
+productosEnCarrito = productosEnCarrito ? JSON.parse(productosEnCarrito) : [];
 
 function agregarAlCarrito(e) {
   const idBoton = e.currentTarget.id;
@@ -69,6 +71,11 @@ function agregarAlCarrito(e) {
     });
   }
   actualizarNumerito();
+
+  localStorage.setItem(
+    "productos_en_carrito",
+    JSON.stringify(productosEnCarrito)
+  );
 }
 
 function actualizarNumerito() {
@@ -78,3 +85,4 @@ function actualizarNumerito() {
   );
   numerito.innerText = nuevoNumerito;
 }
+actualizarNumerito();
