@@ -4,7 +4,7 @@ const botonesCategoria = document.querySelectorAll(".boton_categoria");
 const TituloPrincipal = document.querySelector(".titulo_principal");
 let botonesAgregar = document.querySelectorAll(".producto_agregar");
 const numerito = document.querySelector(".numerito");
-
+//funcion cargar productos
 function CargarProductos(productosElegidos) {
   contenedorProductos.innerHTML = " ";
   productosElegidos.forEach((producto) => {
