@@ -13,7 +13,7 @@ if (productosEnCarrito && productosEnCarrito.length > 0) {
   CarritoAcciones.classList.remove("disabled");
   CarritoComprado.classList.add("disabled");
 
-  CarritoProductos.innerHTML = " ";
+  CarritoProductos.innerHTML = "";
 
   productosEnCarrito.forEach((producto) => {
     const div = document.createElement("div");
